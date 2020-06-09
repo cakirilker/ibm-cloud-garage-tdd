@@ -22,5 +22,7 @@ describe('the palindrome function should', () => {
   it('error for empty string', () => {
     expect(() => isPalindrome('')).toThrowError('empty strings are not palindrome');
   });
-  it.todo('error for not a string');
+  it('error for not a string', () => {
+    expect(() => isPalindrome(1)).toThrowError('input must be a string');
+  });
 })
