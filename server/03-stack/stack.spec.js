@@ -48,6 +48,11 @@ describe('a stack', () => {
     stack.push(item);
     expect(stack.pop(item)).toEqual(item);
   });
-  it.todo('pops two items with the most recent first');
+  it('pops two items with the most recent first', () => {
+    stack.push('A');
+    stack.push('B');
+    expect(stack.pop()).toEqual('B');
+    expect(stack.pop()).toEqual('A');
+  });
   it.todo('accepts only a positive capacity');
 });
