@@ -1,3 +1,5 @@
+const { stack } = require('./stack')
+
 describe('the stack canary spec', () => {
   it('shows the infrastructure works', () => {
     expect(true).toBe(true);
@@ -5,7 +7,9 @@ describe('the stack canary spec', () => {
 });
 
 describe('a stack', () => {
-  it.todo('starts empty');
+  it('starts empty', () => {
+    expect(stack.isEmpty()).toBe(true);
+  });
   it.todo('starts with stack size of 0');
   it.todo('is not empty when pushed');
   it.todo('stack size is 1 when pushed');
