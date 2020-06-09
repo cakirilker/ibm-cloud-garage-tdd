@@ -3,3 +3,13 @@ describe('the palindrome canary spec', () => {
     expect(true).toBe(true);
   });
 });
+
+describe('the palindrome function should', () => {
+  it.todo('true for mom');
+  it.todo('false for dude');
+  it.todo('true for mom mom');
+  it.todo('false for dad mom');
+  it.todo('true for whitespace');
+  it.todo('error for empty string');
+  it.todo('error for not a string');
+})
