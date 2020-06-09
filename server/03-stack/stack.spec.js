@@ -38,10 +38,10 @@ describe('a stack', () => {
   it('throws overflow error when pushing to a stack at full capacity', () => {
     stack.push();
     stack.push();
-    expect(() => stack.push()).toThrowError('capacity overflow error');
+    expect(() => stack.push()).toThrowError('Capacity overflow error');
   });
   it('throw underflow error when popping an empty stack', () => {
-    expect(() => stack.pop()).toThrowError('capacity underflow error');
+    expect(() => stack.pop()).toThrowError('Capacity underflow error');
   });
   it('pops the same one item when pushed', () => {
     const item = 'A';
@@ -54,5 +54,7 @@ describe('a stack', () => {
     expect(stack.pop()).toEqual('B');
     expect(stack.pop()).toEqual('A');
   });
-  it.todo('accepts only a positive capacity');
+  it('accepts only a positive capacity', () => {
+    expect(() => stack = new Stack(-1)).toThrowError('Invalid capacity');
+  });
 });
