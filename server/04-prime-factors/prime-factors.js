@@ -1,11 +1,9 @@
 const findPrimeFactors = (number) => {
   let factors = [];
   if (number > 1) {
-    while (number % 2 === 0) {
-      factors.push(2);
-      number /= 2;
+    for (let divisor = 2; number > 1; divisor++) {
+      for (; number % divisor === 0; number /= divisor) factors.push(divisor);
     }
-    if (number > 1) factors.push(number);
   }
   return factors;
 }
